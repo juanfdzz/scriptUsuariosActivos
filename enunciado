@@ -1,0 +1,8 @@
+Enunciado:
+
+Una forma de determinar la validez de la cuenta es verificar si es propietaria de archivos y si es así, ver cuál fue la última fecha de modificación.
+Escribe el código para obtener la información siguiente, cuentas que:
+        ◦ No tengan archivos.
+        ◦ Los archivos han sido modificados hace más de 6 meses.
+        ◦ Los archivos han sido modificados hace más de 1 año.
+        ◦ Obtener las cuentas que cumplan el punto 1 y el 3.
