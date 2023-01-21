@@ -17,7 +17,7 @@ echo -e "\n\nHay un total de $suma usuarios sin archivos"
 function 6meses(){
         echo -e "\n\nCuentas de usuario que hace más de 6 meses que no modifican un archivo:"
         for user in $(cat /etc/passwd | cut -d ':' -f1); do #itera por cada usuario en /etc/passwd
-                if ! [ $(find -user $user -type f -mtime +180 ! -name '.*' -not -path '*/\.*/*' | wc -l ) -gt 0 ]; then #comprueba que el usuario tenga archivos modificados en un plazo de tiempo desde la fecha actual hasta 6 meses
+                if ! [ $(find -user $user -type f -mtime -180 ! -name '.*' -not -path '*/\.*/*' | wc -l ) -gt 0 ]; then #comprueba que el usuario tenga archivos modificados en un plazo de tiempo desde la fecha actual hasta 6 meses
 
                         echo $user | tr '\n' ',' #los muestra cambiando los saltos de línea por comas
                 fi
